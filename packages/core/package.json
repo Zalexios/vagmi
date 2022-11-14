@@ -1,0 +1,119 @@
+{
+  "name": "@vagmi/core",
+  "description": "Vanilla JS library for Ethereum",
+  "keywords": [
+    "vue",
+    "hooks",
+    "eth",
+    "ethereum",
+    "dapps",
+    "wallet",
+    "web3",
+    "wagmi",
+    "vagmi"
+  ],
+  "license": "MIT",
+  "version": "0.7.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobsoriano/vagmi.git",
+    "directory": "packages/core"
+  },
+  "author": {
+    "name": "Zale",
+    "email": "zalexios@outlook.com",
+    "url": "https://github.com/zalexios"
+  },
+  "ethereum": "0x7BA012D92c1D01Fd8787eBBff72D15e8DB1371dD",
+  "homepage": "https://github.com/wobsoriano/vagmi#readme",
+  "bugs": {
+    "url": "https://github.com/wobsoriano/vagmi/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./chains": {
+      "import": "./dist/chains.mjs",
+      "require": "./dist/chains.js"
+    },
+    "./connectors/coinbaseWallet": {
+      "import": "./dist/connectors/coinbaseWallet.mjs",
+      "require": "./dist/connectors/coinbaseWallet.js",
+      "types": "./dist/connectors/coinbaseWallet.d.ts"
+    },
+    "./connectors/injected": {
+      "import": "./dist/connectors/injected.mjs",
+      "require": "./dist/connectors/injected.js",
+      "types": "./dist/connectors/injected.d.ts"
+    },
+    "./connectors/metaMask": {
+      "import": "./dist/connectors/metaMask.mjs",
+      "require": "./dist/connectors/metaMask.js",
+      "types": "./dist/connectors/metaMask.d.ts"
+    },
+    "./connectors/walletConnect": {
+      "import": "./dist/connectors/walletConnect.mjs",
+      "require": "./dist/connectors/walletConnect.js",
+      "types": "./dist/connectors/walletConnect.d.ts"
+    },
+    "./providers/alchemy": {
+      "import": "./dist/providers/alchemy.mjs",
+      "require": "./dist/providers/alchemy.js",
+      "types": "./dist/providers/alchemy.d.ts"
+    },
+    "./providers/infura": {
+      "import": "./dist/providers/infura.mjs",
+      "require": "./dist/providers/infura.js",
+      "types": "./dist/providers/infura.d.ts"
+    },
+    "./providers/jsonRpc": {
+      "import": "./dist/providers/jsonRpc.mjs",
+      "require": "./dist/providers/jsonRpc.js",
+      "types": "./dist/providers/jsonRpc.d.ts"
+    },
+    "./providers/public": {
+      "import": "./dist/providers/public.mjs",
+      "require": "./dist/providers/public.js",
+      "types": "./dist/providers/public.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "chains.d.ts",
+    "connectors",
+    "providers"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "@coinbase/wallet-sdk": ">=3.3.0",
+    "@walletconnect/ethereum-provider": ">=1.7.5",
+    "ethers": ">=5.5.1"
+  },
+  "peerDependenciesMeta": {
+    "@coinbase/wallet-sdk": {
+      "optional": true
+    },
+    "@walletconnect/ethereum-provider": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "abitype": "^0.1.8",
+    "eventemitter3": "^4.0.7",
+    "@wagmi/core": "^0.7.3"
+  },
+  "devDependencies": {
+    "@coinbase/wallet-sdk": "^3.4.1",
+    "@walletconnect/ethereum-provider": "^1.7.8",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "DEV=true tsup"
+  }
+}
