@@ -34,7 +34,7 @@ export const fetchBalances = async ({
 }: FetchBalancesArgs): Promise<FetchBalanceResult[]> => {
   const provider = getProvider({ chainId });
 
-  if (!!tokens) {
+  if (!!tokens && tokens.length > 0) {
     type FetchContractBalance = { abi: typeof erc20ABI }
 
     const fetchContractBalances = async ({ abi }: FetchContractBalance) => {
